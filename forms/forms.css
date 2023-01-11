@@ -1,0 +1,1162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
+  --primary-color: #33415c;
+  --secondary-color: #3aafc3;
+  --secondary2-color: #ec6432;
+  --success-color: #27ae60;
+  --danger-color: #eb5757;
+  --warning-color: #e2b93b;
+  --info-color: #2f80ed;
+  --light-color: #e5f4f7;
+  --dark-color: #001233;
+  --gray-100: #33415c;
+  --gray-200: #5c677d;
+  --gray-300: #7d8597;
+  --gray-400: #979dac;
+  --gray-500: #c5c8d0;
+  --gray-600: #e5e6e9;
+  --gray-700: #fafafa;
+  --white-color: #ffffff;
+  --body-color: #fafafa;
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Anton", sans-serif;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 600;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --normal-font-size: 13px;
+    --small-font-size: 12px;
+    --smaller-font-size: 12px;
+  }
+}
+
+*::-moz-selection {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  margin: 0;
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--gray-400);
+  background-color: var(--body-color);
+  letter-spacing: -0.009em;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--gray-100);
+  font-weight: 600;
+}
+
+.h3,
+h3 {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.h4,
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.h5,
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.p-5 {
+  padding: 3rem;
+}
+
+.bg-primary {
+  background: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background: var(--secondary-color) !important;
+}
+
+.bg-secondary2 {
+  background: var(--secondary2-color) !important;
+}
+
+.bg-success {
+  background: var(--success-color) !important;
+}
+
+.bg-danger {
+  background: var(--danger-color) !important;
+}
+
+.bg-warning {
+  background: var(--warning-color) !important;
+}
+
+.bg-info {
+  background: var(--info-color) !important;
+}
+
+.bg-light {
+  background: var(--light-color) !important;
+}
+
+.bg-dark {
+  background: var(--dark-color) !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.me-auto {
+  margin-right: auto;
+}
+
+.df {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.jcse {
+  justify-content: space-evenly;
+}
+
+.pt-1 {
+  padding-top: 1px;
+}
+
+.pt-2 {
+  padding-top: 2px;
+}
+
+.pt-3 {
+  padding-top: 3px;
+}
+
+.pt-4 {
+  padding-top: 4px;
+}
+
+.pt-5 {
+  padding-top: 6px;
+}
+
+.pt-6 {
+  padding-top: 6px;
+}
+
+.d-none {
+  display: none;
+}
+
+.uniqly {
+  /*style the arrow inside the select element:*/
+  /*point the arrow upwards when the select box is open (active):*/
+  /*style the items (options), including the selected item:*/
+  /*style items (options):*/
+  /*hide the items when the select box is closed:*/
+}
+.uniqly .form-check {
+  height: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  position: relative;
+}
+.uniqly .form-check .check-input {
+  margin: 20px 0;
+  position: absolute;
+  opacity: 0;
+}
+.uniqly .form-check .check-input + .check-label {
+  color: var(--gray-100);
+  position: relative;
+  left: 29px;
+  cursor: pointer;
+}
+.uniqly .form-check .check-input + .check-label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e5e6e9;
+  border-radius: 4px;
+  background: #ffffff;
+  position: absolute;
+  top: -2px;
+  left: -29px;
+}
+.uniqly .form-check .check-input:checked + .check-label:before {
+  background: var(--gray-100);
+}
+.uniqly .form-check .check-input.secondary:checked + .check-label:before {
+  background: var(--secondary-color);
+}
+.uniqly .form-check .check-input.secondary2:checked + .check-label:before {
+  background: var(--secondary2-color);
+}
+.uniqly .form-check .check-input.success:checked + .check-label:before {
+  background: var(--success-color);
+}
+.uniqly .form-check .check-input.warning:checked + .check-label:before {
+  background: var(--warning-color);
+}
+.uniqly .form-check .check-input.danger:checked + .check-label:before {
+  background: var(--danger-color);
+}
+.uniqly .form-check .check-input.info:checked + .check-label:before {
+  background: var(--info-color);
+}
+.uniqly .form-check .check-input.dark:checked + .check-label:before {
+  background: var(--dark-color);
+}
+.uniqly .form-check .check-input.outline:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--gray-100);
+}
+.uniqly .form-check .check-input.outline.secondary:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--secondary-color);
+}
+.uniqly .form-check .check-input.outline.secondary2:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--secondary2-color);
+}
+.uniqly .form-check .check-input.outline.success:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--success-color);
+}
+.uniqly .form-check .check-input.outline.warning:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--warning-color);
+}
+.uniqly .form-check .check-input.outline.danger:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--danger-color);
+}
+.uniqly .form-check .check-input.outline.info:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--info-color);
+}
+.uniqly .form-check .check-input.outline.dark:checked + .check-label:before {
+  background: none;
+  border: 1px solid var(--dark-color);
+}
+.uniqly .form-check .check-input:disabled + .check-label {
+  color: var(--gray-400);
+  cursor: auto;
+}
+.uniqly .form-check .check-input.only-disabled:disabled + .check-label:before {
+  box-shadow: none;
+  background: none;
+}
+.uniqly .form-check .check-input:disabled + .check-label:before {
+  box-shadow: none;
+  background: var(--gray-400);
+}
+.uniqly .form-check .check-input.outline:disabled + .check-label:before {
+  box-shadow: none;
+  background: none;
+  border: 1px solid var(--gray-400);
+}
+.uniqly .form-check .check-input:checked + .check-label:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 7px;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 var(--white-color), 4px 0 0 var(--white-color), 4px -2px 0 var(--white-color), 4px -4px 0 var(--white-color), 4px -6px 0 var(--white-color), 4px -8px 0 var(--white-color);
+  background: var(--white-color);
+  transform: rotate(45deg);
+}
+.uniqly .form-check .check-input.outline:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--gray-100), 4px 0 0 var(--gray-100), 4px -2px 0 var(--gray-100), 4px -4px 0 var(--gray-100), 4px -6px 0 var(--gray-100), 4px -8px 0 var(--gray-100);
+  background: var(--gray-100);
+}
+.uniqly .form-check .check-input.outline.secondary:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--secondary-color), 4px 0 0 var(--secondary-color), 4px -2px 0 var(--secondary-color), 4px -4px 0 var(--secondary-color), 4px -6px 0 var(--secondary-color), 4px -8px 0 var(--secondary-color);
+  background: var(--secondary-color);
+}
+.uniqly .form-check .check-input.outline.secondary2:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--secondary2-color), 4px 0 0 var(--secondary2-color), 4px -2px 0 var(--secondary2-color), 4px -4px 0 var(--secondary2-color), 4px -6px 0 var(--secondary2-color), 4px -8px 0 var(--secondary2-color);
+  background: var(--secondary2-color);
+}
+.uniqly .form-check .check-input.outline.success:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--success-color), 4px 0 0 var(--success-color), 4px -2px 0 var(--success-color), 4px -4px 0 var(--success-color), 4px -6px 0 var(--success-color), 4px -8px 0 var(--success-color);
+  background: var(--success-color);
+}
+.uniqly .form-check .check-input.outline.warning:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--warning-color), 4px 0 0 var(--warning-color), 4px -2px 0 var(--warning-color), 4px -4px 0 var(--warning-color), 4px -6px 0 var(--warning-color), 4px -8px 0 var(--warning-color);
+  background: var(--warning-color);
+}
+.uniqly .form-check .check-input.outline.danger:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--danger-color), 4px 0 0 var(--danger-color), 4px -2px 0 var(--danger-color), 4px -4px 0 var(--danger-color), 4px -6px 0 var(--danger-color), 4px -8px 0 var(--danger-color);
+  background: var(--danger-color);
+}
+.uniqly .form-check .check-input.outline.info:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--info-color), 4px 0 0 var(--info-color), 4px -2px 0 var(--info-color), 4px -4px 0 var(--info-color), 4px -6px 0 var(--info-color), 4px -8px 0 var(--info-color);
+  background: var(--info-color);
+}
+.uniqly .form-check .check-input.outline.dark:checked + .check-label:after {
+  box-shadow: 2px 0 0 var(--dark-color), 4px 0 0 var(--dark-color), 4px -2px 0 var(--dark-color), 4px -4px 0 var(--dark-color), 4px -6px 0 var(--dark-color), 4px -8px 0 var(--dark-color);
+  background: var(--dark-color);
+}
+.uniqly .form-check .check-input.outline:disabled + .check-label:after {
+  box-shadow: 2px 0 0 var(--gray-400), 4px 0 0 var(--gray-400), 4px -2px 0 var(--gray-400), 4px -4px 0 var(--gray-400), 4px -6px 0 var(--gray-400), 4px -8px 0 var(--gray-400);
+  background: var(--gray-400);
+}
+.uniqly .form-radio {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.uniqly .form-radio [type=radio]:checked,
+.uniqly .form-radio [type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.uniqly .form-radio [type=radio]:checked + label,
+.uniqly .form-radio [type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: var(--gray-100);
+}
+.uniqly .form-radio [type=radio]:disabled + label {
+  color: var(--gray-400);
+}
+.uniqly .form-radio [type=radio]:checked + label:before,
+.uniqly .form-radio [type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--gray-600);
+  border-radius: 100%;
+  background: #fff;
+}
+.uniqly .form-radio [type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--dark-color);
+}
+.uniqly .form-radio .secondary[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--secondary-color);
+}
+.uniqly .form-radio .secondary2[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--secondary2-color);
+}
+.uniqly .form-radio .success[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--success-color);
+}
+.uniqly .form-radio .warning[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--warning-color);
+}
+.uniqly .form-radio .danger[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--danger-color);
+}
+.uniqly .form-radio .info[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--info-color);
+}
+.uniqly .form-radio .dark[type=radio]:checked + label:before {
+  border: none;
+  background-color: var(--dark-color);
+}
+.uniqly .form-radio [type=radio]:disabled + label:before {
+  border: 1px solid var(--gray-600);
+  background-color: var(--white-color);
+}
+.uniqly .form-radio .outline[type=radio]:checked + label:before {
+  border: 3px solid var(--primary-color);
+  background: #fff;
+  width: 20px;
+  height: 20px;
+}
+.uniqly .form-radio .secondary.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--secondary-color);
+}
+.uniqly .form-radio .secondary2.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--secondary2-color);
+}
+.uniqly .form-radio .success.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--success-color);
+}
+.uniqly .form-radio .warning.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--warning-color);
+}
+.uniqly .form-radio .danger.danger.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--danger-color);
+}
+.uniqly .form-radio .info.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--info-color);
+}
+.uniqly .form-radio .dark.outline[type=radio]:checked + label:before {
+  border: 3px solid var(--dark-color);
+}
+.uniqly .form-radio [type=radio]:checked + label:after,
+.uniqly .form-radio [type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--white-color);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+.uniqly .form-radio .outline[type=radio]:checked + label:after {
+  background: var(--primary-color);
+}
+.uniqly .form-radio .secondary.outline[type=radio]:checked + label::after {
+  background: var(--secondary-color);
+}
+.uniqly .form-radio .secondary2.outline[type=radio]:checked + label::after {
+  background: var(--secondary2-color);
+}
+.uniqly .form-radio .success.outline[type=radio]:checked + label::after {
+  background: var(--success-color);
+}
+.uniqly .form-radio .warning.outline[type=radio]:checked + label::after {
+  background: var(--warning-color);
+}
+.uniqly .form-radio .danger.danger.outline[type=radio]:checked + label::after {
+  background: var(--danger-color);
+}
+.uniqly .form-radio .info.outline[type=radio]:checked + label::after {
+  background: var(--info-color);
+}
+.uniqly .form-radio .dark.outline[type=radio]:checked + label::after {
+  background: var(--dark-color);
+}
+.uniqly .form-radio [type=radio]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.uniqly .form-radio [type=radio]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.uniqly .form-switch {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.uniqly .form-switch .switch-label {
+  color: var(--gray-100);
+}
+.uniqly .form-switch input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 33px;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--gray-600));
+  background: var(--b, var(--w));
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+.uniqly .form-switch input[type=checkbox].outline {
+  width: 38px;
+  height: 20px;
+}
+.uniqly .form-switch input[type=checkbox].outline::after {
+  width: 24px;
+  height: 24px;
+  top: -2px;
+  left: -2px;
+}
+.uniqly .form-switch input[type=checkbox].outline:checked {
+  border: 1px solid var(--gray-100);
+}
+.uniqly .form-switch input[type=checkbox].outline:checked:after {
+  background: var(--gray-100);
+}
+.uniqly .form-switch input[type=checkbox].outline:checked {
+  background: none;
+}
+.uniqly .form-switch input[type=checkbox].outline:disabled {
+  border: 1px solid var(--gray-400);
+}
+.uniqly .form-switch input[type=checkbox].outline:disabled:checked::after {
+  background: var(--gray-400);
+}
+.uniqly .form-switch input[type=checkbox].outline.secondary:checked {
+  border: 1px solid var(--secondary-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.secondary:checked::after {
+  background: var(--secondary-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.secondary2:checked {
+  border: 1px solid var(--secondary2-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.secondary2:checked::after {
+  background: var(--secondary2-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.success:checked {
+  border: 1px solid var(--success-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.success:checked::after {
+  background: var(--success-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.danger:checked {
+  border: 1px solid var(--danger-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.danger:checked::after {
+  background: var(--danger-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.warning:checked {
+  border: 1px solid var(--warning-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.warning:checked::after {
+  background: var(--warning-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.info:checked {
+  border: 1px solid var(--info-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.info:checked::after {
+  background: var(--info-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.dark:checked {
+  border: 1px solid var(--dark-color);
+}
+.uniqly .form-switch input[type=checkbox].outline.dark:checked::after {
+  background: var(--dark-color);
+}
+.uniqly .form-switch input[type=checkbox]:after {
+  content: "";
+  display: block;
+  left: 2px;
+  top: 3px;
+  right: 2px;
+  position: absolute;
+  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+}
+.uniqly .form-switch input[type=checkbox]:checked:after {
+  background-color: var(--white-color);
+}
+.uniqly .form-switch input[type=checkbox]:checked {
+  --b: var(--gray-100);
+  --bc: var(--gray-100);
+  --d-o: 0.3s;
+  --d-t: 0.6s;
+  --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+.uniqly .form-switch input[type=checkbox].secondary:checked {
+  --b: var(--secondary-color);
+  --bc: var(--secondary-color);
+}
+.uniqly .form-switch input[type=checkbox].secondary2:checked {
+  --b: var(--secondary2-color);
+  --bc: var(--secondary2-color);
+}
+.uniqly .form-switch input[type=checkbox].success:checked {
+  --b: var(--success-color);
+  --bc: var(--success-color);
+}
+.uniqly .form-switch input[type=checkbox].danger:checked {
+  --b: var(--danger-color);
+  --bc: var(--danger-color);
+}
+.uniqly .form-switch input[type=checkbox].warning:checked {
+  --b: var(--warning-color);
+  --bc: var(--warning-color);
+}
+.uniqly .form-switch input[type=checkbox].info:checked {
+  --b: var(--info-color);
+  --bc: var(--info-color);
+}
+.uniqly .form-switch input[type=checkbox].dark:checked {
+  --b: var(--dark-color);
+  --bc: var(--dark-color);
+}
+.uniqly .form-switch input[type=checkbox]:disabled {
+  --b: var(--white-color);
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+.uniqly .form-switch input[type=checkbox]:disabled:checked {
+  --b: var(--gray-400);
+  --bc: none;
+}
+.uniqly .form-switch input[type=checkbox]:disabled:checked::after {
+  top: 4px;
+}
+.uniqly .form-switch input[type=checkbox]:disabled + label {
+  cursor: not-allowed;
+  color: var(--gray-400);
+}
+.uniqly .form-switch input[type=checkbox]:not(.switch) {
+  width: 21px;
+}
+.uniqly .form-switch input[type=checkbox]:not(.switch):after {
+  opacity: var(--o, 0);
+}
+.uniqly .form-switch input[type=checkbox]:not(.switch):checked {
+  --o: 1;
+}
+.uniqly .form-switch input[type=checkbox] + label {
+  font-size: 14px;
+  color: var(--gray-100);
+  line-height: 21px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.uniqly .form-switch .switch {
+  width: 33px;
+  border-radius: 11px;
+}
+.uniqly .form-switch .switch:after {
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--gray-600);
+  transform: translateX(var(--x, 0));
+}
+.uniqly .form-switch .switch:checked {
+  --ab: var(--white-color);
+  --x: 15px;
+}
+.uniqly .form-switch .switch:disabled:not(:checked):after {
+  opacity: 0.6;
+}
+.uniqly .form-switch.md input[type=checkbox] {
+  width: 45px;
+  height: 26px;
+}
+.uniqly .form-switch.md .switch {
+  border-radius: 800px;
+}
+.uniqly .form-switch.md .switch::after {
+  width: 18px;
+  height: 18px;
+  left: 3px;
+}
+.uniqly .form-switch.md .switch:checked {
+  --x: 18px;
+}
+.uniqly .form-switch.lg input[type=checkbox] {
+  width: 57px;
+  height: 32px;
+}
+.uniqly .form-switch.lg .switch {
+  border-radius: 800px;
+}
+.uniqly .form-switch.lg .switch::after {
+  width: 24px;
+  height: 24px;
+  left: 3px;
+}
+.uniqly .form-switch.lg .switch:checked {
+  --x: 24px;
+}
+.uniqly .custom-input-field {
+  margin-bottom: 30px;
+}
+.uniqly .custom-input-field .input-lavel {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--gray-100);
+  font-weight: 600;
+  display: inline-block;
+}
+.uniqly .input-field textarea,
+.uniqly .input-field input {
+  color: var(--gray-100);
+  display: block;
+  width: 100%;
+  border: 1px solid var(--gray-600);
+  border-radius: 6px;
+  padding: 15px 18px;
+}
+.uniqly .input-field textarea:focus,
+.uniqly .input-field input:focus {
+  border: 1px solid var(--gray-100);
+  outline: none;
+}
+.uniqly .input-field textarea:disabled,
+.uniqly .input-field input:disabled {
+  background: var(--gray-700);
+}
+.uniqly .input-field.rounded input {
+  border-radius: 800px;
+  padding: 15px 24px;
+}
+.uniqly .input-field.icon-left {
+  position: relative;
+}
+.uniqly .input-field.icon-left input {
+  padding-left: 48px;
+}
+.uniqly .input-field.icon-left .form-icon {
+  position: absolute;
+  top: 13px;
+  left: 18px;
+}
+.uniqly .input-field.icon-left .form-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.uniqly .input-field.icon-right {
+  position: relative;
+}
+.uniqly .input-field.icon-right input {
+  padding-right: 48px;
+}
+.uniqly .input-field.icon-right .form-icon {
+  position: absolute;
+  top: 13px;
+  right: 18px;
+}
+.uniqly .input-field.icon-right .form-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.uniqly .custom-select {
+  position: relative;
+  font-family: Arial;
+  border: 1px solid var(--gray-600);
+  border-radius: 6px;
+}
+.uniqly .custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.uniqly .select-selected {
+  background-color: var(--whate-color);
+}
+.uniqly .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--gray-400) transparent transparent transparent;
+}
+.uniqly .select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--gray-400) transparent;
+  top: 13px;
+}
+.uniqly .select-items div,
+.uniqly .select-selected {
+  padding: 15px 18px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.uniqly .select-items {
+  position: absolute;
+  background-color: var(--white-color);
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  color: var(--gray-100);
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.08));
+  border-radius: 4px;
+}
+.uniqly .select-items::after {
+  position: absolute;
+  content: "";
+  top: -21px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-color: transparent transparent var(--white-color) transparent;
+}
+.uniqly .select-items div {
+  padding: 12px 20px;
+}
+.uniqly .select-items div:first-child {
+  padding-top: 22px;
+}
+.uniqly .select-items div:last-child {
+  padding-bottom: 22px;
+}
+.uniqly .select-hide {
+  display: none;
+}
+.uniqly .select-items div:hover,
+.uniqly .same-as-selected {
+  background-color: var(--gray-700);
+  border-radius: 4px;
+}
+.uniqly .iti--allow-dropdown {
+  width: 100%;
+}
+.uniqly .iti--allow-dropdown input {
+  padding-left: 64px;
+}
+.uniqly .iti--allow-dropdown .iti__selected-flag {
+  padding: 0 6px 0 18px;
+}
+.uniqly .button-with-dropdown {
+  margin-top: 10px;
+  display: flex;
+}
+.uniqly .button-with-dropdown .custom-select {
+  flex-grow: 1;
+}
+.uniqly .button-with-dropdown button {
+  background: var(--gray-100);
+  color: var(--white-color);
+  font-weight: 600;
+  border-radius: 6px 0 0 6px;
+  padding: 15px 18px;
+}
+.uniqly .d-none {
+  display: none;
+}
+.uniqly .clr-field {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  color: transparent;
+}
+.uniqly .clr-field button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  color: inherit;
+  text-indent: -1000px;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+}
+.uniqly .input-field.icon-right.custom-color-picker input {
+  padding-left: 48px;
+  padding-right: 38px;
+}
+.uniqly .cus-upload {
+  background: var(--white-color);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.uniqly .cus-upload .control-label {
+  font-size: var(--normal-font-size);
+  color: var(--gray-100);
+  font-weight: 600;
+}
+.uniqly .cus-upload .box {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+}
+.uniqly .cus-upload .box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+.uniqly .cus-upload .box-tools {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.uniqly .cus-upload .dropzone-wrapper {
+  margin-top: 4px;
+  border: 2px dotted var(--gray-600);
+  border-radius: 6px;
+  position: relative;
+  height: 262px;
+  width: 100%;
+  display: block;
+}
+.uniqly .cus-upload .dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 40%;
+  font-size: 16px;
+}
+.uniqly .cus-upload .dropzone-desc p {
+  color: var(--gray-200);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.uniqly .cus-upload .dropzone-desc svg {
+  width: 58px;
+  height: 53px;
+  color: var(--gray-400);
+}
+.uniqly .cus-upload .dropzone,
+.uniqly .cus-upload .dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  opacity: 0;
+}
+.uniqly .cus-upload .dropzone-wrapper:hover,
+.uniqly .cus-upload .dropzone-wrapper.dragover {
+  background: var(--gray-700);
+}
+.uniqly .cus-upload .preview-zone {
+  text-align: center;
+}
+.uniqly .cus-upload .preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.uniqly .cus-upload.small .dropzone-wrapper {
+  height: 100px;
+}
+.uniqly .cus-upload.small .dropzone-desc p {
+  color: var(--gray-200);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.uniqly .cus-upload.small .dropzone-desc svg {
+  display: none;
+}
+.uniqly .cus-upload.small.rounded .dropzone-wrapper {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  margin: auto;
+}
+.uniqly .cus-upload.small.rounded .dropzone-desc {
+  width: 100%;
+  padding: 40px 18px;
+}
+.uniqly .cus-upload.small.rounded .dropzone-desc p {
+  color: var(--gray-200);
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+}
+.uniqly .cus-upload.small.rounded .dropzone-desc svg {
+  display: none;
+}
+.uniqly .one-line-upload-file {
+  margin-top: 10px;
+}
+.uniqly .one-line-upload-file .file-upload {
+  display: block;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px 0px 0px 6px;
+}
+.uniqly .one-line-upload-file .file-upload .file-select {
+  display: block;
+  border: 1px solid var(--gray-600);
+  color: var(--gray-600);
+  color: var(--gray-100);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.uniqly .one-line-upload-file .file-upload .file-select .file-select-button {
+  background: #dce4ec;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 6px 0px 0px 6px;
+}
+.uniqly .one-line-upload-file .file-upload .file-select .file-select-name {
+  display: inline-block;
+  padding: 15px;
+}
+.uniqly .one-line-upload-file .file-upload.active .file-select {
+  border-color: var(--success-color);
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.uniqly .one-line-upload-file .file-upload.active .file-select .file-select-button {
+  background: var(--success-color);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.uniqly .one-line-upload-file .file-upload .file-select input[type=file] {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.uniqly .one-line-upload-file .file-upload .file-select.file-select-disabled {
+  opacity: 0.65;
+}
+.uniqly .one-line-upload-file .file-upload .file-select.file-select-disabled:hover {
+  cursor: default;
+  display: block;
+  border: 2px solid #dce4ec;
+  color: var(--gray-400);
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: left;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.uniqly .one-line-upload-file .file-upload .file-select.file-select-disabled:hover .file-select-button {
+  background: #dce4ec;
+  color: var(--gray-200);
+  display: inline-block;
+}
+.uniqly .one-line-upload-file .file-upload .file-select.file-select-disabled:hover .file-select-name {
+  display: inline-block;
+  padding: 15px;
+}
+.uniqly .dropdown-and-files {
+  margin-top: 10px;
+  display: flex;
+}
+.uniqly .dropdown-and-files .custom-select {
+  background: var(--gray-100);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.uniqly .dropdown-and-files .custom-select .select-items {
+  width: 230px;
+}
+.uniqly .dropdown-and-files .select-selected {
+  color: var(--white-color);
+  font-weight: 600;
+}
+.uniqly .dropdown-and-files .file-upload {
+  flex-grow: 1;
+}
+.uniqly .dropdown-and-files .file-upload .file-select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

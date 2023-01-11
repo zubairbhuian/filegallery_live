@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/aee64c2cac.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="forms.css" />
+
+    <title>Input Fields</title>
+  </head>
+  <body class="uniqly">
+    <div class="p-5">
+      <!-- disabled -->
+      <div class="custom-input-field">
+        <label for="text-field-9" class="input-lavel">Disabled Input Field</label>
+        <div class="input-field">
+          <input type="email" id="text-field-1" disabled />
+        </div>
+      </div>
+      <!-- placeholder -->
+      <div class="custom-input-field">
+        <label for="placeholder" class="input-lavel">Placeholder Input Field</label>
+        <div class="input-field">
+          <input type="email" placeholder="Placeholder" id="placeholder" />
+        </div>
+      </div>
+      <!-- rounded -->
+      <div class="custom-input-field">
+        <label for="rounded" class="input-lavel">Rounded Input Field</label>
+        <div class="input-field rounded">
+          <input type="text" id="rounded" />
+        </div>
+      </div>
+      <!-- icon left-->
+      <div class="custom-input-field">
+        <label for="icon_left" class="input-lavel">Icon Left Input Field</label>
+        <div class="input-field icon-left">
+          <input type="text" id="icon_left" />
+          <div class="form-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+      <!-- icon right-->
+      <div class="custom-input-field">
+        <label for="icon_right" class="input-lavel">Icon Right Input Field</label>
+        <div class="input-field icon-right">
+          <input type="text" id="icon_right" />
+          <div class="form-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+      <!-- password -->
+      <div class="custom-input-field">
+        <label for="passFormId" class="input-lavel">Password Input Field</label>
+        <div class="input-field icon-right">
+          <input type="password" class="passwordclass" id="passFormId" />
+          <div
+            class="form-icon passwordShowHide"
+            onclick="passdordController()"
+          >
+            <i class="fa-regular fa-eye" id="passwordIcon"></i>
+            <i class="d-none fa-regular fa-eye-slash" id="passwordIcon2"></i>
+          </div>
+        </div>
+      </div>
+      <!-- date and time picker -->
+      <div class="custom-input-field">
+        <label for="date_and_time" class="input-lavel">Date and Time Input Field</label>
+        <div class="input-field">
+          <input
+            type="datetime-local"
+            name="meeting-time"
+            value="2018-06-12T19:30"
+            min="2018-06-07T00:00"
+            max="2018-06-14T00:00"
+            id="date_and_time"
+          />
+        </div>
+      </div>
+        <!-- date  picker -->
+      <div class="custom-input-field">
+        <label for="date-input" class="input-lavel">Date Input Field</label>
+        <div class="input-field">
+          <input
+            type="date"
+            name="meeting-time"
+            value="2018-06-12"
+            id="date-input"
+          />
+        </div>
+      </div>
+      <!-- Example Textarea -->
+      <div class="custom-input-field">
+        <label for="example_textarea" class="input-lavel">Example Textarea Input Field</label>
+        <div class="input-field">
+          <textarea name="" id="example_textarea" cols="100" rows="10"></textarea>
+        </div>
+      </div>
+      <!-- Color picker  -->
+      <div class="custom-input-field">
+        <label for="color_picker" class="input-lavel">Color Picker Input Field</label>
+        <div class="input-field icon-right custom-color-picker">
+          <input
+            type="text"
+            class="Circular colorPicker"
+            value="#3AAFC3"
+            data-coloris
+            id="color_picker"
+          />
+          <div class="form-icon colorPickerBtn">
+            <i class="fa-light fa-fill-drip"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Home phone -->
+      <div class="custom-input-field">
+        <label for="phone" class="input-lavel">Home phone</label>
+        <div class="input-field">
+          <input id="phone" type="tel" name="phone" />
+        </div>
+      </div>
+      <!-- Custom select -->
+      <div class="custom-input-field">
+        <label for="" class="input-lavel">Select Country</label>
+        <div class="custom-select" style="width: 510px">
+          <select>
+            <option value="0">Select you country</option>
+            <option value="1">Bangladesh</option>
+            <option value="2">Russia</option>
+            <option value="3">New York</option>
+            <option value="4">Hong Kong</option>
+            <option value="5">Spain</option>
+          </select>
+        </div>
+      </div>
+
+      <!--Default File Input Example-->
+      <div class="custom-input-field">
+        <label for="chooseFile" class="input-lavel">Default File Input Example</label>
+        <div class="one-line-upload-file">
+          <div class="file-upload">
+            <div class="file-select">
+              <div class="file-select-button" id="fileName">Choose File</div>
+              <div class="file-select-name" id="noFile">No file chosen</div>
+              <input type="file" name="chooseFile" id="chooseFile" />
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!--Buttons with dropdowns-->
+      <div class="custom-input-field">
+        <label for="" class="input-lavel">Buttons with dropdowns</label>
+        <div class="one-line-upload-file dropdown-and-files">
+          <div class="custom-select" style="width: 150px">
+            <select>
+              <option value="0">Dropdown</option>
+              <option value="1">Bangladesh</option>
+              <option value="2">Russia</option>
+              <option value="3">New York</option>
+              <option value="4">Hong Kong</option>
+              <option value="5">Spain</option>
+            </select>
+          </div>
+          <div class="file-upload">
+            <div class="file-select">
+              <div class="file-select-name" id="noFile">No file chosen</div>
+              <input type="file" name="chooseFile" id="chooseFile" />
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+      <!-- button with dropdown -->
+      <div class="custom-input-field">
+        <label for="" class="input-lavel">Buttons with dropdowns</label>
+        <div class="button-with-dropdown">
+          <button>Dropdown</button>
+          <div class="custom-select">
+            <select>
+              <option value="0">Select you country</option>
+              <option value="1">Bangladesh</option>
+              <option value="2">Russia</option>
+              <option value="3">New York</option>
+              <option value="4">Hong Kong</option>
+              <option value="5">Spain</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    
+      <!--upload files large -->
+      <div class="custom-input-field">
+        <div class="cus-upload">
+          <form action="upload_files_large" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="" class="control-label">Upload File</label>
+              <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <p>Drop files here or click to upload.</p>
+                </div>
+                <input type="file" name="img_logo" class="dropzone" id="upload_files_large"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+      <!--upload files small -->
+      <div class="custom-input-field">
+        <div class="cus-upload small">
+          <form action="upload_files_small " method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="" class="control-label">Upload File</label>
+              <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <p>Drop files here or click to upload.</p>
+                </div>
+                <input type="file" name="img_logo" class="dropzone"  id="upload_files_small"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+      <!--upload files rounded -->
+      <div class="custom-input-field">
+        <div class="cus-upload small rounded">
+          <form action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="upload_files_rounded" class="control-label">Upload File</label>
+              <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <p>Drag & Drop your picture or Browse</p>
+                </div>
+                <input type="file" name="img_logo" class="dropzone"  id="upload_files_rounded"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    </div>
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    </script>
+
+    <script src="forms.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/aee64c2cac.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="" />
+    <title>Alert</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .demo-btn {
+        padding: 15px 32px;
+        background: yellow;
+      }
+      .demo-btn:hover {
+        border: 2px solid greenyellow;
+      }
+      #player {
+        width: 1000px;
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body class="uniqly">
+    <!-- <a class="demo-btn" href="sidebar/sidebar.html">Click to visite Sidebar</a> -->
+    <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+      <source
+        src="https://uniqlybucket.s3.eu-north-1.amazonaws.com/public/IMG_1150.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <!-- Javascript -->
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script>
+      const player = new Plyr("#player");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/aee64c2cac.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./plyr.css" />
+    <link rel="stylesheet" href="focus-mini.css" />
+    <title>Focus mini</title>
+  </head>
+  <body class="uniqly">
+    <div class="focus-mini-main">
+      <div class="focus-mini-area">
+        <!-- main player -->
+        <div class="focus-mini-uper">
+          <div class="thum-audio">
+            <img src="./images/audio_thum1.png" alt="" />
+          </div>
+          <div class="audio-sec">
+            <!-- text -->
+            <div class="audio-card-text">
+              <h4 class="audio-player-title">File name goes here</h4>
+              <p class="audio-player-subtitle">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <!--  -->
+            <audio controls autoplay id="player">
+              <source
+                id="audio-mp3-src"
+                src="./audio/button_tiny.mp3"
+                type="audio/ogg"
+              />
+            </audio>
+          </div>
+        </div>
+
+        <div class="focus-mini-down">
+          <!-- audio-card -->
+          <div class="audio-card-main active">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn active">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum1.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio/button_tiny.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- audio-card 2 -->
+          <div class="audio-card-main">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum1.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio//demo2.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here2</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the 2</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- audio-card 3-->
+          <div class="audio-card-main">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn active">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum3.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio/demo3.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here3</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the 3</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- audio-card 4 -->
+          <div class="audio-card-main">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum4.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio/button_tiny.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here4</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the 4</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- audio-card 5 -->
+          <div class="audio-card-main">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum5.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio/demo2.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here5</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the 5</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- audio-card 6 -->
+          <div class="audio-card-main">
+            <div class="audio-card-uper">
+              <div class="audio-card-love-btn active">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <button class="vid_download_btn">
+                <i class="fa-light fa-down"></i
+                ><span class="d-none-lg">Download</span>
+              </button>
+              <div class="dot-dropdown">
+                <div class="avatar">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <ul class="dropdown-btn">
+                  <li class="item"><a class="link" href="">Edit</a></li>
+                  <li class="item"><a class="link" href="">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="audio-card">
+              <div class="audio-card-img">
+                <img src="./images/audio_thum6.png" alt="img" />
+              </div>
+              <audio class="d-none">
+                <source
+                  class="card-mp3-src"
+                  src="./audio/demo3.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <div class="audio-card-text">
+                <h4 class="audio-title">File name goes here6</h4>
+                <div class="short-long-text">
+                  <span class="first-text">Lorem Ipsum is simply</span
+                  ><span class="second-text"> dummy text of the 6</span>
+                  <span class="third-text">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="./plyr.min.js"></script>
+    <script src="./focus-mini.js"></script>
+    <script>
+      var controls = ["play", "progress", "duration", "mute", "volume"];
+      const players = Plyr.setup("#player", { controls });
+      window.player = player;
+    </script>
+  </body>
+</html>

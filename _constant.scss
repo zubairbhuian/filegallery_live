@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
+  // main color
+  --primary-color: #33415c;
+  --secondary-color: #3aafc3;
+  --secondary2-color: #ec6432;
+  --success-color: #27ae60;
+  --danger-color: #eb5757;
+  --warning-color: #e2b93b;
+  --info-color: #2f80ed;
+  --light-color: #e5f4f7;
+  --dark-color: #001233;
+  // gray-color
+  --gray-100: #33415c;
+  --gray-200: #5c677d;
+  --gray-300: #7d8597;
+  --gray-400: #979dac;
+  --gray-500: #c5c8d0;
+  --gray-600: #e5e6e9;
+  --gray-700: #fafafa;
+  --white-color: #ffffff;
+  --body-color: #fafafa;
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Anton", sans-serif;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 600;
+  // fontSize
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
+  @media screen and (min-width: 992px) {
+    --normal-font-size: 13px;
+    --small-font-size: 12px;
+    --smaller-font-size: 12px;
+  }
+}
+
+// selection
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+// custrom Scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--gray-400);
+  background-color: var(--body-color);
+  letter-spacing: -0.009em;
+}
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--gray-100);
+  font-weight: 600;
+}
+.h3,
+h3{
+  font-size: 20px;
+  line-height: 22px;
+}
+.h4,
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+.h5,
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+button {
+  border: none;
+  outline: none;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.p-5 {
+  padding: 3rem;
+}
+.bg-primary {
+  background: var(--primary-color) !important;
+}
+.bg-secondary {
+  background: var(--secondary-color) !important;
+}
+.bg-secondary2 {
+  background: var(--secondary2-color) !important;
+}
+.bg-success {
+  background: var(--success-color) !important;
+}
+.bg-danger {
+  background: var(--danger-color) !important;
+}
+.bg-warning {
+  background: var(--warning-color) !important;
+}
+.bg-info {
+  background: var(--info-color) !important;
+}
+.bg-light {
+  background: var(--light-color) !important;
+}
+.bg-dark {
+  background: var(--dark-color) !important;
+}
+
+// .uniqly{
+  // position: relative;
+// }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.m-auto {
+  margin: auto;
+}
+.ms-auto {
+  margin-left: auto;
+}
+.me-auto {
+  margin-right: auto;
+}
+.df {
+  display: flex;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.pt-1{
+  padding-top: 1px;
+}
+.pt-2{
+  padding-top: 2px;
+}
+.pt-3{
+  padding-top: 3px;
+}
+.pt-4{
+  padding-top: 4px;
+}
+.pt-5{
+  padding-top: 6px;
+}
+.pt-6{
+  padding-top: 6px;
+}
+.d-none {
+  display: none;
+}

@@ -1,0 +1,830 @@
+@import "../sidebar/sidebar.scss";
+
+.uniqly {
+  &.file-gallery {
+    .main-body {
+      .top-appbar {
+        align-items: center;
+        .top-appbar-text{
+          margin-top: 7px;
+          b{
+            color: var(--gray-100);
+          }
+          @include media-breakpoint-down(lg) {
+            display: none;
+          }
+          
+        }
+        .top-app-right {
+          .search-bar {
+            margin-right: 30px;
+            @include media-breakpoint-down(md) {
+              display: none;
+            }
+            
+          }
+        }
+      }
+      // !content  body
+    }
+    &.grid-view {
+      .main-body {
+        .content-body {
+          .folders-section {
+            .folder-cards {
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+              gap: 30px;
+              @include media-breakpoint-down(xxl) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+              }
+              @include media-breakpoint-down(md) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+              }
+              .folder-card {
+                padding: 30px 15px 30px 30px;
+                width: 100%;
+                border-radius: 16px;
+                position: relative;
+                &::after{
+                  position: absolute;
+                  content: "";
+                  width: 100%;
+                  height: 100%;
+                  z-index: 9;
+                  top: 0;
+                  left: 0;
+                  border-radius: 16px;
+                }
+                &:hover::after{
+                  background-color: rgba(49, 49, 49, 0.082);
+                }
+                @include media-breakpoint-down(lg) {
+                  padding: 0;
+                }
+
+                &.title {
+                  display: none;
+                }
+                background: var(--white-color);
+                .card-area {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  border-radius: 16px;
+                  .dot-dropdown {
+                    @include media-breakpoint-down(lg) {
+                      order: 1;
+                    }
+                  }
+                  .folder-icon {
+                    svg {
+                      width: 46px;
+                      height: 36px;
+                      color: var(--gray-200);
+                      @include media-breakpoint-down(lg) {
+                        width: 30px;
+                        height: 24px;
+                      }
+                    }
+                  }
+                  .text-lastmodify,
+                  .text-description,
+                  .text-numberoffile,
+                  .text-numberoffile,
+                  .text-filesize {
+                    display: none;
+                  }
+
+                  .text-numberoffile-lg {
+                    display: block;
+                  }
+                  .text-name {
+                    flex-basis: 100%;
+                    padding-top: 30px;
+                    @include media-breakpoint-down(lg) {
+                      flex-basis: auto;
+                      padding-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          // section
+          .allfiles-section {
+            .files-cards {
+              display: grid;
+              @include media-breakpoint-down(xxl) {
+                grid-template-columns: repeat(4, 1fr);
+              }
+
+              grid-template-columns: repeat(5, 1fr);
+              @include media-breakpoint-down(lg) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+              }
+              @include media-breakpoint-down(md) {
+                grid-template-columns: repeat(2, 1fr);
+              }
+
+              gap: 30px;
+              .files-card {
+                border-radius: 12px;
+              }
+              .card-area {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                .text-numberoffile,
+                .text-numberoffile,
+                .text-filesize {
+                  display: none;
+                }
+                .text-name {
+                  padding-top: 30px;
+                  @include media-breakpoint-down(lg) {
+                    padding-top: 10px;
+                  }
+                }
+                .text-name,
+                .text-description,
+                .text-lastmodify {
+                  padding-left: 24px;
+                  @include media-breakpoint-down(lg) {
+                    padding-left: 15px;
+                  }
+                }
+                .text-description {
+                  padding-bottom: 20px;
+                  padding-right: 24px;
+                  color: var(--gray-200);
+                  @include media-breakpoint-down(lg) {
+                    padding-bottom: 10px;
+                    padding-right: 16px;
+                  }
+                }
+                .dot-dropdown,
+                .text-lastmodify {
+                  margin-bottom: 30px;
+                  @include media-breakpoint-down(lg) {
+                    margin-bottom: 15px;
+                  }
+                }
+                .dot-dropdown {
+                  margin-right: 15px;
+                }
+                .text-description,
+                .folder-icon {
+                  flex-basis: 100%;
+                }
+                .dot-dropdown {
+                  order: 1;
+                }
+                .folder-icon {
+                  img {
+                    width: 100%;
+                    border-radius: 12px 12px 0 0;
+                  }
+                }
+              }
+            }
+            .dot-dropdown {
+              width: 20px;
+              height: 20px;
+              .avatar {
+                width: 20px;
+                height: 20px;
+                svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // !list view
+  &.list-view {
+    .files-cards{
+
+      display: grid;
+      @include media-breakpoint-up(lg) {
+        gap: 10px 0;
+        grid-template-columns: 1fr;
+        .files-card{
+          border: none;
+          height: 54px;
+          background: transparent;
+          padding: 0;
+          .vid-btn{
+            display: none;
+          }
+          &:first-child {
+            border-bottom: 2px solid var(--gray-600);
+          }
+          &.title {
+            &.folder-card{
+              &:hover{
+                &::after{
+                  background-color: transparent;
+                }}
+            }
+            .card-area {
+              color: var(--gray-100);
+              font-size: var(--normal-font-size);
+            }
+          }
+          .card-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: 1px solid var(--gray-600);
+            height: 54px;
+            font-size: var(--small-font-size);
+            color: var(--gray-200);
+            // padding-top: 12px;
+            // padding-bottom: 14px;
+            .folder-icon {
+              flex-basis: 100px;
+              svg {
+                margin-left: 5px;
+                width: 30px;
+                height: 24px;
+              }
+            }
+            .dot-dropdown {
+              order: 1;
+            }
+            // text
+            .text-name {
+              padding: 0;
+              margin: 0;
+              flex-basis: 120px;
+              font-size: 16px;
+              &.fs-14 {
+                font-size: var(--normal-font-size);
+                font-weight: 400;
+              }
+            }
+            .text-description {
+              // margin-left: auto;
+              flex-grow: 1;
+              padding-left: 4px;
+              padding-right: 4px;
+              color: var(--gray-200);
+            }
+            .text-numberoffile {
+              flex-basis: 120px;
+            }
+            .text-lastmodify {
+              flex-basis: 120px;
+            }
+            .text-filesize {
+              flex-basis: 120px;
+            }
+          }
+          display: flex;
+          // folder card
+          &.files-card {
+            background: var(--white-color);
+            border-radius: 12px;
+            height: 80px;
+            .card-area {
+              height: 80px;
+              border-radius: 12px;
+              .love-icon{
+                @include media-breakpoint-up(lg) {
+                  display: none;
+                }
+              }
+              .extra-icon {
+                @include media-breakpoint-up(lg) {
+                  display: none;
+                }
+              }
+              .folder-icon {
+                img {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 10px;
+                  margin-left: 10px;
+                }
+              }
+              .dot-dropdown {
+                margin-right: 20px;
+              }
+            }
+          }
+          &.folder-card {
+            position: relative;
+            &::after{
+              position: absolute;
+              content: "";
+              width: 100%;
+              height: 100%;
+              z-index: 9;
+              top: 0;
+              left: 0;
+              border-radius: 0px;
+            }
+            &:hover{
+              &::after{
+                background-color: rgba(49, 49, 49, 0.082);
+              }
+              .card-area{
+                border-bottom:1px solid transparent ;
+              }
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        .card-area {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          .text-numberoffile,
+          .text-numberoffile,
+          .text-filesize {
+            display: none;
+          }
+          .text-name {
+
+              padding-top: 10px;
+            
+          }
+          .text-name,
+          .text-description,
+          .text-lastmodify {
+
+              padding-left: 15px;
+            
+          }
+          .text-description {
+
+              padding-bottom: 10px;
+              padding-right: 16px;
+            
+          }
+          .dot-dropdown,
+          .text-lastmodify {
+
+              margin-bottom: 15px;
+            
+          }
+          .dot-dropdown {
+            margin-right: 15px;
+            order: 1;
+            .avatar{
+              svg{
+                width: 14px ;
+                height: 14px;
+              }
+            }
+          }
+          .text-description,
+          .folder-icon {
+            flex-basis: 100%;
+          }
+          .folder-icon {
+            img {
+              width: 100%;
+              border-radius: 12px 12px 0 0;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .love-icon{
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+      .extra-icon {
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+      .folder-icon {
+        img {
+          width: 100%;
+
+          border-radius: 10px;
+        }
+      }
+      .dot-dropdown {
+        margin-right: 20px;
+      }
+      
+    }
+    .folder-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      .folder-card {
+        border-radius: 0px;
+        border: none;
+        height: 54px;
+        background: transparent;
+        padding: 0;
+        &:first-child {
+          border-bottom: 2px solid var(--gray-600);
+        }
+        &.title {
+          &.folder-card{
+            &:hover{
+              &::after{
+                background-color: transparent;
+              }}
+          }
+          .card-area {
+            color: var(--gray-100);
+            font-size: var(--normal-font-size);
+          }
+        }
+        .card-area {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          border-bottom: 1px solid var(--gray-600);
+          height: 54px;
+          font-size: var(--small-font-size);
+          color: var(--gray-200);
+          .folder-icon {
+            flex-basis: 100px;
+            svg {
+              margin-left: 5px;
+              width: 30px;
+              height: 24px;
+            }
+          }
+          .dot-dropdown {
+            order: 1;
+          }
+          // text
+          .text-name {
+            padding: 0;
+            margin: 0;
+            flex-basis: 120px;
+            font-size: 16px;
+            &.fs-14 {
+              font-size: var(--normal-font-size);
+              font-weight: 400;
+            }
+          }
+          .text-description {
+            // margin-left: auto;
+            flex-grow: 1;
+            padding-left: 4px;
+            padding-right: 4px;
+            color: var(--gray-200);
+          }
+          .text-numberoffile {
+            flex-basis: 120px;
+          }
+          .text-lastmodify {
+            flex-basis: 120px;
+          }
+          .text-filesize {
+            flex-basis: 120px;
+          }
+        }
+        display: flex;
+        // folder card
+        &.files-card {
+          background: var(--white-color);
+          border-radius: 12px;
+          height: 80px;
+          .card-area {
+            height: 80px;
+            border-radius: 12px;
+            .love-icon{
+              @include media-breakpoint-up(lg) {
+                display: none;
+              }
+            }
+            .extra-icon {
+              @include media-breakpoint-up(lg) {
+                display: none;
+              }
+            }
+            .folder-icon {
+              img {
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+                margin-left: 10px;
+              }
+            }
+            .dot-dropdown {
+              margin-right: 20px;
+
+            }
+          }
+        }
+        &.folder-card {
+          position: relative;
+          &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            border-radius: 0px;
+          }
+          &:hover{
+            &::after{
+              background-color: rgba(49, 49, 49, 0.082);
+            }
+            .card-area{
+              border-bottom:1px solid transparent ;
+            }
+          }
+        }
+      }
+    }
+
+   }
+}
+
+.grid-list-btn {
+  &:hover {
+    background-color: var(--gray-700);
+  }
+  &.active {
+    background-color: rgba(24, 24, 24, 0.12);
+    svg {
+      color: var(--secondary-color);
+    }
+  }
+  width: 38px;
+  height: 38px;
+  margin-right: 15px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  svg {
+    width: 18px;
+    height: 18px;
+    color: var(--primary-color);
+  }
+}
+.folder-cards {
+  .text-numberoffile-lg {
+    display: none;
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .folder-card {
+
+    @include media-breakpoint-down(lg) {
+      background: var(--white-color) !important;
+      border-radius: 12px !important;
+      height: 81px !important;
+    }
+
+    .card-area {
+      @include media-breakpoint-down(lg) {
+        border-bottom: none;
+        border-radius: 12px;
+        padding: 20px 10px 20px 20px;
+        height: 81px !important;
+        .folder-icon {
+          flex-basis: auto !important;
+          margin-right: 16px;
+          svg {
+            margin-left: 0 !important;
+          }
+        }
+        .text-name {
+          margin-right: auto !important;
+        }
+      }
+    }
+    &.title {
+      @include media-breakpoint-down(lg) {
+        display: none !important;
+      }
+    }
+    .text-numberoffile,
+    .text-description,
+    .text-lastmodify,
+    .text-filesize {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.files-cards {
+  display: grid;
+}
+.files-card {
+  border-radius: 12px;
+  background: var(--white-color);
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+  }
+  &:hover::after{
+    background-color: rgba(49, 49, 49, 0.082);
+  }
+  .extra-icon {
+    margin-right: 10px;
+    color: var(--gray-400);
+  }
+  .folder-icon {
+    border-radius: 12px 12px 0px 0px;
+    position: relative;
+    .vid-btn{
+      width: 58px;
+      height: 58px;
+      background: #393b415e;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid var(--white-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      left:  50%;
+      transform: translate(-50%,-50%);
+      svg{
+        width: 20px;
+        height: 20px;
+        color: var(--white-color);
+      }
+      @include media-breakpoint-down(lg) {
+        width: 38px;
+        height: 38px;
+        svg{
+          width: 14px;
+          height: 14px;
+          color: var(--white-color);
+        }
+      }
+      
+    }
+    .love-icon {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      right: 22px;
+      top: 14px;
+      background: rgba(255, 255, 255, 0.24);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+      border-radius: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99;
+      
+      @include media-breakpoint-down(sm) {
+        right: 3px;
+        top: 3px;
+      }     
+      svg {
+        color: var(--white-color);
+      }
+      &.active{
+        background: var(--secondary-color);
+
+      }
+    }
+  }
+  .text-content {
+    padding: 30px 24px;
+    h4 {
+      margin-bottom: 20px;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+    .date-card {
+      padding-left: 10px;
+    }
+  }
+}
+// three dot dropdown
+.dot-dropdown {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-down(lg) {
+    width: 24px;
+    height: 24px;
+  }
+  
+  cursor: pointer;
+  .avatar {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fa-ellipsis-vertical {
+    width: 18px;
+    height: 18px;
+  }
+  .dropdown-btn {
+    position: absolute;
+    left: -72px;
+    top: 5px;
+    background: var(--white-color);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 999;
+    overflow: auto;
+    border: 1px solid var(--gray-600);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 6px;
+    display: none;
+    &.show {
+      display: block;
+    }
+
+    .item {
+      padding: 10px 20px;
+      &:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+      &:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      &:hover {
+        background: var(--gray-600);
+      }
+      &:active {
+        background-color: rgba(33, 118, 55, 0.568);
+        color: black !important;
+      }
+      .link {
+        text-decoration: none;
+      }
+      a {
+        color: var(--gray-100);
+      }
+    }
+  }
+  &:hover .dropdown-btn{
+   display: block;
+  }
+}
+section {
+  padding: 30px;
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+  }
+  .sec-title {
+    padding-bottom: 20px;
+  }
+}
